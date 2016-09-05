@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, , UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var imagePickerView: UIImageView!
     override func viewDidLoad() {
