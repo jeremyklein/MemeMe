@@ -17,28 +17,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xVX-mY-9on">
+                                <rect key="frame" x="123" y="172" width="240" height="128"/>
+                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sdu-qz-zZa">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem title="Show" id="p2d-Go-dCK">
+                                    <barButtonItem title="Camera" width="150" id="p2d-Go-dCK">
                                         <connections>
-                                            <action selector="pickAnImage:" destination="BYZ-38-t0r" id="Fqm-HS-GVj"/>
+                                            <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" id="N8M-nG-k7B"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Library" width="150" id="C7a-l5-6iu" userLabel="Library">
+                                        <connections>
+                                            <action selector="pickAnImageFromLibrary:" destination="BYZ-38-t0r" id="mez-oZ-QQW"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xVX-mY-9on">
-                                <rect key="frame" x="124" y="174" width="240" height="128"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="CameraButton" destination="p2d-Go-dCK" id="DOH-nN-0Jw"/>
                         <outlet property="imagePickerView" destination="xVX-mY-9on" id="pW5-CX-bAP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="179" y="302"/>
         </scene>
     </scenes>
 </document>
