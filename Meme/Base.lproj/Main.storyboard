@@ -17,11 +17,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xVX-mY-9on">
-                                <rect key="frame" x="123" y="172" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xVX-mY-9on">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="548"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="556" id="3Dy-JH-E4b"/>
+                                    <constraint firstAttribute="width" constant="240" id="3gt-7X-Thr"/>
+                                    <constraint firstAttribute="height" constant="128" id="9z6-b8-KBf"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="600" id="KlB-7C-b3I"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3gt-7X-Thr"/>
+                                        <exclude reference="9z6-b8-KBf"/>
+                                    </mask>
+                                </variation>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sdu-qz-zZa">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sdu-qz-zZa">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="Xkd-Lg-0qN"/>
+                                    <constraint firstAttribute="height" constant="44" id="pAZ-ij-U8J"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem title="Camera" width="150" id="p2d-Go-dCK">
                                         <connections>
@@ -37,6 +53,19 @@
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sdu-qz-zZa" firstAttribute="trailing" secondItem="xVX-mY-9on" secondAttribute="trailing" id="AuA-3R-65B"/>
+                            <constraint firstItem="sdu-qz-zZa" firstAttribute="top" secondItem="xVX-mY-9on" secondAttribute="bottom" id="RX0-Ew-cSb"/>
+                            <constraint firstItem="xVX-mY-9on" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZP4-eX-bZf"/>
+                            <constraint firstItem="sdu-qz-zZa" firstAttribute="leading" secondItem="xVX-mY-9on" secondAttribute="leading" id="ctA-Pc-jpn"/>
+                            <constraint firstItem="sdu-qz-zZa" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="e6v-OV-l2w"/>
+                            <constraint firstItem="xVX-mY-9on" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r5y-fr-QqG"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="e6v-OV-l2w"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="CameraButton" destination="p2d-Go-dCK" id="DOH-nN-0Jw"/>
